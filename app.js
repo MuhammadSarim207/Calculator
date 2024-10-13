@@ -1,18 +1,20 @@
 var screenDiv = document.getElementById("screen")
-  
-var result;
-
+screenDiv.innerText += value
 function getValue(value) {
- screenDiv.innerText += value  
-
-if (value === '=') {
-   var result = eval(screenDiv.innerText)
-   screenDiv.innerText = result
-}
- if (value === 'C') {
-    screenDiv.innerText = " "
- }
- if (value === 'Del') {
-    screenDiv.innerText = screenDiv.innerText.slice(0,screenDiv.innerText.length - 4)
- }
+  
+   switch (value) {
+      case '=' :
+         var res = eval(screenDiv.innerText)
+         screenDiv.innerText = res
+         break;
+   case 'Del' :
+      screenDiv.innerText = screenDiv.innerText.slice(0,screenDiv.innerText.length-1)
+     break;
+     case 'C' :
+      screenDiv.innerText = ""
+      break;
+      default:
+         screenDiv.innerText += value
+         break;
+   }
 }

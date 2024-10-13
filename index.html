@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Honk&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <style type="text/css">
         body{
-            background-color: rgb(75, 38, 38);
+            background-image: url(https://png.pngtree.com/background/20211215/original/pngtree-cartoon-satellite-ruler-calculator-linear-education-background-picture-image_1458755.jpg);
         }
         #screen{
             background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
@@ -19,9 +19,11 @@
             height: 100px;
             border-radius: 30px;
             border: 2px solid green;
-            margin-top: 5px;
-            margin-left: 40px;
             text-align: center;
+            -moz-box-shadow: inset 10px 10px 20px  #96e6a1; 
+-webkit-box-shadow: inset 10px 10px 20px  #c0fc36 ; 
+box-shadow: inset 10px 10px 20px #50dd63 ; 
+overflow: hidden;
         }
         #btn{
    background-color: white;
@@ -42,23 +44,21 @@ margin-top: 10px;
         #main{
             background: rgb(0,0,0);
             background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(3,6,17,1) 95%, rgba(1,11,31,1) 100%);
-            width: 24%;
-            height: 440px;
-           margin-top: 200px;
-           margin-left: 500px;
+            width: 400px;
+            height: 520px;
            border-radius: 10px;
            display: flex;
-           align-items: left;
+           align-items: center;
+           justify-content: space-evenly;
            flex-direction: column;
            -moz-box-shadow: 5px 10px 5px lightgrey; 
 -webkit-box-shadow: 5px 10px 5px lightgrey ; 
 box-shadow: 10px 15px 20px rgb(22, 22, 22) ;
 font-family: Kanit;  
-font-size: larger;
+font-size: x-large;
         }
         .btn1:hover{
-        border: 2px solid gray;
-        background-color: rgb(37, 120, 202);
+        border: 2px solid rgb(0, 68, 136);
         }
         .btn2:hover{
             border: 2px solid gold;
@@ -69,7 +69,62 @@ font-size: larger;
         .btn4:hover{
             border: 2px solid gray;
         }
+        .btn1{
+            -moz-box-shadow: inset 10px 10px 20px  rgb(50, 99, 148); 
+-webkit-box-shadow: inset 10px 10px 20px  rgb(50, 99, 148) ; 
+box-shadow: inset 10px 10px 20px rgb(36, 87, 138) ;
+        }
+        .btn2{
+            -moz-box-shadow: inset 10px 10px 20px rgb(252, 252, 126); 
+-webkit-box-shadow: inset 10px 10px 20px  rgb(252, 252, 126) ; 
+box-shadow: inset 10px 10px 20px rgb(245, 245, 88) ; 
+        }
+        .btn3{
+            -moz-box-shadow: inset 10px 10px 20px  rgb(250, 21, 21); 
+-webkit-box-shadow: inset 10px 10px 20px  rgb(250, 21, 21) ; 
+box-shadow: inset 10px 10px 20px rgb(250, 21, 21) ; 
+        }
+        .btn4{
+            -moz-box-shadow: inset 10px 10px 20px  lightgray; 
+-webkit-box-shadow: inset 10px 10px 20px  lightgray ; 
+box-shadow: inset 10px 10px 20px rgb(71, 71, 71) ; 
+        }
+        p{
+            font-family: Honk;
+            font-size: 60pt;
+        }
+        .fix{
+            display: flex;
+            flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+        }
+        @media screen and (max-width:375px) {
+            p{
+                font-size: 50pt;
+            }
+            #main{
+                width: 365px;
+            }
+        }
+        @media screen and (max-width:320px) {
+            p{
+                font-size: 40pt;
+            }
+            #main{
+                width: 320px;
+            }
+            #screen{
+                width: 310px;
+            }
+            #btn{
+                width: 90px;
+            }
+        }
         </style>
+        <div class="fix">
+        <p>SIMPLE CALCULATOR</p>
         <div id="main">
             <div id="screen"></div>
             <div class="btns">
@@ -101,6 +156,7 @@ font-size: larger;
                 <buttton id="btn" class="btn3" style="background-color: rgb(255, 69, 69);" onclick="getValue('Del')">Del</buttton>
                 <buttton id="btn" class="btn3" style="background-color: rgb(255, 69, 69);" onclick="getValue('C')" >C</buttton>
             </div>
+        </div>
         </div>
 </body>
 <script src="app.js"></script>
